@@ -8,17 +8,35 @@ Cylinder::Cylinder(){
 }
 
 Cylinder::Cylinder(double radiusPar, double heightPar) {
-    if (radius > 0) {
+    if (radiusPar > 0) {
         radius = radiusPar;
 
     } else {
         radius = 0.0;
     }
 
-    if (height > 0) {
+    if (heightPar> 0) {
         height = heightPar;
     } else {
         height = 0.0;
+    }
+}
+
+void Cylinder::setRadius (double radiusPar) {
+    if (radiusPar > 0) {
+        radius = radiusPar;
+
+    } else {
+        radius = 0;
+    }
+}
+
+void Cylinder::setHeight (double heightPar) {
+    if (heightPar > 0) {
+        height = heightPar;
+
+    } else {
+        height = 0;
     }
 }
 
@@ -30,23 +48,6 @@ double Cylinder::getRadius() {
     return radius;
 }
 
-void Cylinder::setRadius (double radiusPar) {
-    if (radius > 0) {
-        radius = radiusPar;
-
-    } else {
-        radius = 0.0;
-    }
-}
-
-void Cylinder::setHeight (double heightPar) {
-    if (height > 0) {
-        height = heightPar;
-
-    } else {
-        height = 0.0;
-    }
-}
 
 double Cylinder::calcSurfaceArea (double radiusPar, double heightPar) {
     return 2 * M_PI * radiusPar * (heightPar + radiusPar);

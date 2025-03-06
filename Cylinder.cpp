@@ -22,6 +22,14 @@ Cylinder::Cylinder(double radiusPar, double heightPar) {
     }
 }
 
+double Cylinder::getHeight() {
+    return height;
+}
+
+double Cylinder::getRadius() {
+    return radius;
+}
+
 void Cylinder::setRadius (double radiusPar) {
     if (radius > 0) {
         radius = radiusPar;
@@ -47,6 +55,6 @@ double Cylinder::calcSurfaceArea (double radiusPar, double heightPar) {
 
 double Cylinder::calcVolume (double radiusPar, double heightPar) {
     return M_PI * pow(radiusPar, 2) * heightPar;
-    
+
 }
 
